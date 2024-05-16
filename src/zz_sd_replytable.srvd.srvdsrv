@@ -1,0 +1,9 @@
+@EndUserText.label: 'Service Definition for Reply Table'
+@ObjectModel.leadingEntity.name: 'ZZ_C_REPLYTABLE'
+define service ZZ_SD_ReplyTable {
+  expose ZZ_C_ReplyTable  as ReplyTable;
+  expose ZZ_C_ReplyCode   as ReplyCode;
+  expose ZZ_C1_MRCBUILD   as MRCBuild;
+  expose ZZ_C_MRC         as MRC;
+  expose ZI_FFFRELATED_VH as FFF;
+}

@@ -1,0 +1,119 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'ReplyCode',
+    typeNamePlural: 'ReplyCodes',
+    title: {
+      type: #STANDARD,
+      label: 'ReplyCode',
+      value: 'ReplyCode'
+    }
+  },
+  presentationVariant: [ {
+    qualifier: 'pvariant',
+    sortOrder: [
+    {
+      by: 'LocalLastChanged',
+      direction: #DESC
+    }
+    ]
+//    visualizations: [ {
+//      type: #AS_LINEITEM,
+//      element: 'DetailLevel'
+//    } ]
+  } ]
+
+}
+
+annotate view ZZ_C_ReplyCode with
+{
+  @UI.facet: [ {
+    id: 'replyCode',
+    purpose: #STANDARD,
+    type: #IDENTIFICATION_REFERENCE,
+    label: 'ReplyCode',
+    position: 10
+  } ]
+  @UI.hidden: true
+  ReplyCodeUUID;
+
+  @UI.hidden: true
+  ReplyTableUUID;
+
+  @UI.lineItem: [ { position: 30 ,importance: #HIGH } ]
+  @UI.identification: [ { position: 30} ]
+  @UI.selectionField: [ { position: 30 } ]
+  ReplyCode;
+
+  @UI.lineItem: [ {
+    position: 40 ,
+    importance: #HIGH,
+    label: 'Description'
+  } ]
+  @UI.identification: [ {
+    position: 40,
+    label: 'Description'
+  } ]
+  Description;
+  
+/*   @UI.lineItem: [ {
+    position: 50 ,
+    importance: #HIGH,
+    label: 'Long Description'
+  } ]
+  @UI.identification: [ {
+    position: 50,
+    label: 'Long Description'
+  } ]
+  LongText; */
+
+//  @UI.lineItem: [ {
+//    position: 50 ,
+//    importance: #HIGH,
+//    criticality: 'Criticality'
+//  } ]
+//  @UI.identification: [ {
+//    position: 50 ,
+//    criticality: 'Criticality'
+//  } ]
+//  severity;
+
+//  @UI.hidden: true
+//  criticality;
+
+  @UI.lineItem: [ {
+    position: 60 ,
+    importance: #HIGH,
+    label: 'Is Temporary'
+  } ]
+  @UI.identification: [ {
+    position: 60,
+    label: 'Temporary Value'
+  } ]
+  IsTemporary;
+
+  @UI.lineItem: [ {
+    position: 70 ,
+    importance: #HIGH
+  } ]
+  @UI.identification: [ {
+    position: 70,
+    label: 'Created By'
+    
+  } ]
+  CreatedBy;
+  
+  
+    @UI.lineItem: [ {
+    position: 80 ,
+    importance: #HIGH
+  } ]
+  @UI.identification: [ {
+    position: 80
+  } ]
+  CreatedAt;
+
+  @UI.hidden: true
+ // locallastchangedgedat;
+  LocalLastChanged;
+}
