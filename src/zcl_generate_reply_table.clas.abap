@@ -72,7 +72,7 @@ CLASS ZCL_GENERATE_REPLY_TABLE IMPLEMENTATION.
 
     DATA(timestamp) = ts.
 
-    APPEND VALUE #( client = sy-mandt
+    APPEND VALUE #( client = '001'
                     mrc_uuid = zcl_get_uuid_x16=>generate_uuid_x16(  )
                     "mrc_uuid = cl_uuid_factory=>create_system_uuid( )
                     mrc_code = 'MATT'
@@ -88,7 +88,7 @@ CLASS ZCL_GENERATE_REPLY_TABLE IMPLEMENTATION.
                     last_changed_at = timestamp
                     local_last_changed = timestamp ) TO t_mrc_header.
 
-    APPEND VALUE #( client = sy-mandt
+    APPEND VALUE #( client = '001'
                             mrc_uuid = zcl_get_uuid_x16=>generate_uuid_x16(  )
                             mrc_code = 'BGTB'
                             description = 'Storage Facility'
@@ -103,7 +103,7 @@ CLASS ZCL_GENERATE_REPLY_TABLE IMPLEMENTATION.
                             last_changed_at = timestamp
                             local_last_changed = timestamp ) TO t_mrc_header.
 
-    APPEND VALUE #( client = sy-mandt
+    APPEND VALUE #( client = '001'
                             mrc_uuid = zcl_get_uuid_x16=>generate_uuid_x16(  )
                             mrc_code = 'ALEQ'
                             description = 'Canopy Width'
@@ -137,7 +137,7 @@ CLASS ZCL_GENERATE_REPLY_TABLE IMPLEMENTATION.
     IF sy-subrc = 0.
       "Add 2 records with the replytable
       wa_code-reply_table_uuid = replytab-replytable_uuid.
-      wa_code-client = sy-mandt.
+      wa_code-client = '001'.
       wa_code-description = to_upper( 'Mandatory' ).
       wa_code-is_temporary = ''.
       wa_code-created_by = sy-uname.
@@ -173,7 +173,7 @@ CLASS ZCL_GENERATE_REPLY_TABLE IMPLEMENTATION.
       wa_code-reply_code = 'AY'.
       wa_code-reply_code_uuid = zcl_get_uuid_x16=>generate_uuid_x16(  ).
       wa_code-reply_table_uuid = replytab-replytable_uuid.
-      wa_code-client = sy-mandt.
+      wa_code-client = '001'.
       wa_code-description = to_upper( 'General Purpose Heated Warehouse' ).
       wa_code-is_temporary = ''.
       wa_code-created_by = sy-uname.
@@ -211,7 +211,7 @@ CLASS ZCL_GENERATE_REPLY_TABLE IMPLEMENTATION.
       wa_code-reply_code = 'AF'.
       wa_code-reply_code_uuid = zcl_get_uuid_x16=>generate_uuid_x16(  ).
       wa_code-reply_table_uuid = replytab-replytable_uuid.
-      wa_code-client = sy-mandt.
+      wa_code-client = '001'.
       wa_code-description = to_upper( 'Chill' ).
       wa_code-is_temporary = ''.
       wa_code-created_by = sy-uname.
@@ -249,7 +249,7 @@ CLASS ZCL_GENERATE_REPLY_TABLE IMPLEMENTATION.
       wa_code-reply_code = '3AAC'.
       wa_code-reply_code_uuid = zcl_get_uuid_x16=>generate_uuid_x16(  ).
       wa_code-reply_table_uuid = replytab-replytable_uuid.
-      wa_code-client = sy-mandt.
+      wa_code-client = '001'.
       wa_code-description =  to_upper( 'Core Conductor First Conductor' ).
       wa_code-is_temporary = ''.
       wa_code-created_by = sy-uname.
@@ -288,7 +288,7 @@ CLASS ZCL_GENERATE_REPLY_TABLE IMPLEMENTATION.
       wa_code-reply_code = to_upper( 'ada000' ).
       wa_code-reply_code_uuid = zcl_get_uuid_x16=>generate_uuid_x16(  ).
       wa_code-reply_table_uuid = replytab-replytable_uuid.
-      wa_code-client = sy-mandt.
+      wa_code-client = '001'.
       wa_code-description =  to_upper( 'adhesive' ).
       wa_code-is_temporary = ''.
       wa_code-created_by = sy-uname.
@@ -351,7 +351,7 @@ CLASS ZCL_GENERATE_REPLY_TABLE IMPLEMENTATION.
 
     DATA(timestamp) = ts.
 
-    APPEND VALUE #( client = '200'
+    APPEND VALUE #( client = '001'
                     replytable_uuid = zcl_get_uuid_x16=>generate_uuid_x16(  )
                     replytable = 'AN11'
                     replycodesize = ''
@@ -363,7 +363,7 @@ CLASS ZCL_GENERATE_REPLY_TABLE IMPLEMENTATION.
                     last_changed_by = sy-uname
                     last_changed_at = timestamp
                     local_last_changed = timestamp ) TO t_replytable.
-    APPEND VALUE #( client = '200'
+    APPEND VALUE #( client = '001'
                     replytable_uuid = zcl_get_uuid_x16=>generate_uuid_x16(  )
                     replytable = 'AM81'
                     replycodesize = 2
@@ -376,7 +376,7 @@ CLASS ZCL_GENERATE_REPLY_TABLE IMPLEMENTATION.
                     last_changed_at = timestamp
                     local_last_changed = timestamp ) TO t_replytable.
 
-    APPEND VALUE #( client = '200'
+    APPEND VALUE #( client = '001'
                     replytable_uuid = zcl_get_uuid_x16=>generate_uuid_x16(  )
                     replytable = 'AN12'
                     replycodesize = 2
@@ -389,7 +389,7 @@ CLASS ZCL_GENERATE_REPLY_TABLE IMPLEMENTATION.
                     last_changed_at = timestamp
                     local_last_changed = timestamp ) TO t_replytable.
 
-    APPEND VALUE #( client = '200'
+    APPEND VALUE #( client = '001'
                     replytable_uuid = zcl_get_uuid_x16=>generate_uuid_x16(  )
                     replytable = '0333'
                     replycodesize = 4
@@ -403,7 +403,7 @@ CLASS ZCL_GENERATE_REPLY_TABLE IMPLEMENTATION.
                     local_last_changed = timestamp ) TO t_replytable.
 
 
-    APPEND VALUE #( client = '200'
+    APPEND VALUE #( client = '001'
                     replytable_uuid = zcl_get_uuid_x16=>generate_uuid_x16(  )
                     replytable = 'MA01'
                     replycodesize = 6
