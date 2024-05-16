@@ -1,5 +1,5 @@
 @EndUserText.label: 'Service Definition for MRC'
-@ObjectModel.leadingEntity.name: 'ZZ_C_MRC'
+
 define service ZZ_SD_MRC {
   expose ZZ_C_MRC        as MRC;
   expose ZZ_C_MRCBUILD   as MRCBuild;
